@@ -33,11 +33,11 @@ func (h *ProductoHandler) GetTemporaryProducts(c *gin.Context) {
     temporaryProductos := h.repo.GetTemporaryProductos()
 
     if len(temporaryProductos) == 0 {
-        c.JSON(http.StatusOK, []domain.Producto{}) // Devuelve un array vacío en lugar de un mensaje
+        c.JSON(http.StatusOK, []domain.Producto{}) 
         return
     }
 
-    c.JSON(http.StatusOK, temporaryProductos) // Devuelve un array de productos
+    c.JSON(http.StatusOK, temporaryProductos)
 }
 
 
