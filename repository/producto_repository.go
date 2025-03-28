@@ -32,7 +32,6 @@ func (r *ProductoRepository) AddProduct(producto domain.Producto) {
         r.productosConDescuento++
     }
 
-    // Inicia un temporizador para eliminar el producto después de 15 segundos
     go func() {
         time.Sleep(15 * time.Second)
         r.mutex.Lock()
