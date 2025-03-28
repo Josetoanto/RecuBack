@@ -33,7 +33,7 @@ func (r *ProductoRepository) AddProduct(producto domain.Producto) {
     }
 
     go func() {
-        time.Sleep(15 * time.Second)
+        time.Sleep(5 * time.Second)
         r.mutex.Lock()
         defer r.mutex.Unlock()
         if len(r.temporaryProductos) > 0 {
